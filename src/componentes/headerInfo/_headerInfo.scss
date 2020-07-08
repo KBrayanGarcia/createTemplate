@@ -1,0 +1,27 @@
+.headerInfo{
+	background-color: $colorSecundario;
+	padding: 10px 0;
+	&__container{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
+		@include container();
+	}
+	&__labels{
+		flex: 0 0 calc(70% - 10px);
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__label-container{
+		padding: 5px ;
+	}
+	&__label{
+		font-weight: 600;
+		color: $colorClaro;
+	}
+	&__value{
+		font-weight: initial;
+		color: $colorPrincipal;
+	}
+}

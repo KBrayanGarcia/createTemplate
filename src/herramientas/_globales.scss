@@ -1,0 +1,26 @@
+$fuente1:"Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+"Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 
+"Noto Color Emoji";
+$colorPrincipal: #32dbc6;
+$colorSecundario: #343a40;
+$colorClaro: #fff;
+
+@import 'herramientas/mixins';
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: $fuente1;
+}
+html{
+	font-size: 14px;
+	@include media(movil-l){
+		font-size: 15px;
+	}
+	@include media(tablets){
+		font-size: 16px;
+	}
+	@include media(desktops){
+		font-size: 18px;
+	}
+}

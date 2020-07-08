@@ -1,0 +1,10 @@
+.redes{
+	display: flex;
+	justify-content: flex-end;
+	flex: 0 0 calc(30% - 10px);
+	&__icono{
+		color: $colorPrincipal;
+		font-size: 1.25rem;
+		padding: 10px;
+	}
+}
