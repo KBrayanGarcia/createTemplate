@@ -6,6 +6,7 @@ $colorSecundario: #343a40;
 $colorClaro: #fff;
 
 @import 'herramientas/mixins';
+
 *{
 	margin: 0;
 	padding: 0;
@@ -23,4 +24,7 @@ html{
 	@include media(desktops){
 		font-size: 18px;
 	}
+}
+a{
+	text-decoration: none;
 }

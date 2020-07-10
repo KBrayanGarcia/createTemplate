@@ -1,0 +1,125 @@
+.navBar{
+	display: block;
+	background-color: $colorClaro;
+	@include section();
+	@include media(desktop-l){
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	@include media(desktop-l){
+		@include container();
+	}
+	&__container{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
+		@include container();
+	}
+	&__enlaces-container{
+		@include container();
+		overflow: hidden;
+		max-height: 0;
+		padding: 0!important;
+		transition: all .5s ease-in-out;
+		@include media(desktop-l){
+			max-height:100vh;
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+	&__enlaces-container.mostrar{
+		max-height: 100vh;
+	}
+	&__logotipo{
+		font-weight: 400;
+	}
+	&__logotipo-punto{
+		color: $colorPrincipal;
+	}
+	&__burger-container{
+		border: 1px solid $colorSecundario;
+		padding:8px;
+		@include media(desktop-l){
+			display: none;
+		}
+	}
+	&__burger{
+		font-size: 1.875rem;
+	}
+
+	&__enlace-container{
+		padding: 15px 0;
+		@include media(desktop-l){
+			padding: 15px;
+		}
+	}
+	&__enlace-container:last-of-type{
+		@include media(desktop-l){
+			padding-right:0;
+		}
+	}
+	&__enlace{
+		text-transform: capitalize;
+		color: $colorSecundario;
+		font-weight: 300;
+		transition: all .3s ease-in-out;
+		-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		-ms-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+		&:hover{
+			color: $colorPrincipal;
+		}
+	}
+	&__enlace-subEnlaces .navBar__enlace{
+		padding: 15px 15px;
+		@include media(desktop-l){
+			padding: 15px 0;
+		}
+	}
+	&__enlace-superior{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__icon-arrow{
+		display: flex;
+		justify-content: flex-end;
+		margin-left:10px;
+		transition:all .4s ease;
+		-webkit-transition:all .4s ease;
+		-moz-transition:all .4s ease;
+		-ms-transition:all .4s ease;
+		-o-transition:all .4s ease;
+		&:hover{
+			color: $colorPrincipal;
+			cursor: pointer;
+		}
+	}
+	&__icon-arrow.reverse{
+		transform: rotate(180deg);
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+	}
+	&__enlace-subEnlaces{
+		transition:all .4s ease;
+		max-height: 0;
+		overflow: hidden;
+		@include media(desktop-l){
+			position: absolute;
+		}
+	}
+	&__enlace-subEnlaces.mostrar{
+		max-height: 100vh;
+		background-color: $colorClaro;
+		@include media(desktop-l){
+			border-top: 2px solid $colorPrincipal;
+		}
+	}
+}
+
+
